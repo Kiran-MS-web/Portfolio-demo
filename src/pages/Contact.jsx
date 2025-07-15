@@ -21,7 +21,7 @@ export default function Contact() {
       toast({
   title: "📩 Message received!",
   description: "Thanks for reaching out — I’ll get back to you soon. Until then, keep building the future 🚀",
-  duration: 5000, // 5 seconds
+  duration: 2000, // 5 seconds
 });
 
       setFormData({ name: "", email: "", message: "" });
