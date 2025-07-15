@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { useToast } from "../hooks/use-toast";
-import emailjs from "@emailjs/browser"; // npm install emailjs-com , npm install @emailjs/browser , yarn add @emailjs/browser
-
+import emailjs from "@emailjs/browser"; // npm install emailjs-com
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });

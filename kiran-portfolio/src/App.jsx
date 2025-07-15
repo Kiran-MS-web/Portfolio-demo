@@ -1,5 +1,4 @@
-import React from 'react'
-import { NavLink } from 'react-router'
+
 import Home from './pages/Home'
 import Navbar from './pages/Navbar'
 import About from './pages/About'
