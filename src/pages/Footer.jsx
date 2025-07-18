@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   const socialLinks = [
     { icon: <FaLinkedin />, href: "https://linkedin.com/in/kiranms", color: "from-blue-500 to-purple-600" },
-    { icon: <FaGithub />, href: "https://github.com/kiranms", color: "from-gray-700 to-gray-900" },
-    { icon: <FaInstagram />, href: "https://instagram.com/kiranms", color: "from-pink-500 to-yellow-500" },
+    { icon: <FaGithub />, href: "https://github.com/Kiran-MS-web", color: "from-gray-700 to-gray-900" },
+    { icon: <FaInstagram />, href: "https://instagram.com/kiran_ms_", color: "from-pink-500 to-yellow-500" },
     { icon: <FaTwitter />, href: "https://twitter.com/kiranms", color: "from-cyan-400 to-blue-600" },
   ];
 
