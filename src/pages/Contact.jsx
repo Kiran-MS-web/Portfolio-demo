@@ -12,16 +12,16 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_6tf3y58",     // Replace with your EmailJS service ID
-        "template_qx2yedm",    // Replace with your EmailJS template ID
+        "// Replace with your EmailJS service ID",     
+        "// Replace with your EmailJS template ID",    
         formRef.current,
-        "Zh6ZKtLQzzMCTeJQK"      // Replace with your EmailJS public key
+        "// Replace with your EmailJS public key"      
       );
 
       toast({
   title: "📩 Message received!",
   description: "Thanks for reaching out — I’ll get back to you soon. Until then, keep building the future 🚀",
-  duration: 2000, // 5 seconds
+  duration: 3000, // 3 seconds
 });
 
       setFormData({ name: "", email: "", message: "" });
