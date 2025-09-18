@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useToast } from "../hooks/use-toast";
-import emailjs from "@emailjs/browser"; // npm install emailjs-com
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -12,16 +12,16 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "// Replace with your EmailJS service ID",     
-        "// Replace with your EmailJS template ID",    
+        "service_6tf3y58",     // Replace with your EmailJS service ID
+        "template_qx2yedm",    // Replace with your EmailJS template ID
         formRef.current,
-        "// Replace with your EmailJS public key"      
+        "Zh6ZKtLQzzMCTeJQK"      // Replace with your EmailJS public key
       );
 
       toast({
   title: "📩 Message received!",
   description: "Thanks for reaching out — I’ll get back to you soon. Until then, keep building the future 🚀",
-  duration: 3000, // 3 seconds
+  duration: 2000, // 5 seconds
 });
 
       setFormData({ name: "", email: "", message: "" });
@@ -40,7 +40,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 px-4 bg-black bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] animate-breathe">
+    <section
+      id="contact"
+      className="relative py-20 px-4 bg-black bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] animate-breathe"
+    >
       <div className="max-w-5xl mx-auto text-center animate-fadeInUp">
         <h2 className="text-5xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-300 bg-clip-text text-transparent animate-glow">
           Contact the Future
@@ -51,12 +54,16 @@ export default function Contact() {
       </div>
 
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 animate-fadeInUp">
-        {/* Form */}
-        <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5 p-6 bg-opacity-10 backdrop-blur border border-cyan-400/20 rounded-xl shadow-neon animate-float">
-          {['name', 'email'].map((field) => (
+        {/* Contact Form */}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-5 p-6 bg-opacity-10 backdrop-blur border border-cyan-400/20 rounded-xl shadow-neon animate-float"
+        >
+          {["name", "email"].map((field) => (
             <div key={field} className="relative">
               <input
-                type={field === 'email' ? 'email' : 'text'}
+                type={field === "email" ? "email" : "text"}
                 name={field}
                 value={formData[field]}
                 onChange={handleChange}
@@ -66,6 +73,7 @@ export default function Contact() {
               />
             </div>
           ))}
+
           <div className="relative">
             <textarea
               name="message"
@@ -77,6 +85,7 @@ export default function Contact() {
               className="w-full px-4 py-3 bg-black bg-opacity-20 border border-cyan-500 rounded-md text-cyan-300 placeholder-cyan-500 focus:outline-none focus:ring-2 focus:ring-pink-400 neon-input"
             ></textarea>
           </div>
+
           <button
             type="submit"
             className="bg-gradient-to-r from-cyan-500 via-pink-500 to-yellow-300 py-3 px-6 rounded-full text-black font-bold uppercase tracking-wide transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow"
@@ -85,17 +94,23 @@ export default function Contact() {
           </button>
         </form>
 
-        {/* Info */}
+        {/* Contact Info */}
         <div className="space-y-6 text-cyan-200 animate-fadeInRight">
           <div>
             <h4 className="text-xl font-bold text-pink-400">Phone</h4>
-            <a href="tel:+919972146948" className="text-sm hover:text-pink-300 transition">
+            <a
+              href="tel:+919972146948"
+              className="text-sm hover:text-pink-300 transition"
+            >
               +91 99721 46948
             </a>
           </div>
           <div>
             <h4 className="text-xl font-bold text-yellow-400">Email</h4>
-            <a href="mailto:kiranms880@gmail.com" className="text-sm break-words hover:text-yellow-300 transition">
+            <a
+              href="mailto:kiranms880@gmail.com"
+              className="text-sm break-words hover:text-yellow-300 transition"
+            >
               kiranms880@gmail.com
             </a>
           </div>
