@@ -12,17 +12,18 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_6tf3y58",     // Replace with your EmailJS service ID
-        "template_qx2yedm",    // Replace with your EmailJS template ID
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
-        "Zh6ZKtLQzzMCTeJQK"      // Replace with your EmailJS public key
+        import.meta.env.VITE_PUBLIC_KEY
       );
 
       toast({
-  title: "📩 Message received!",
-  description: "Thanks for reaching out — I’ll get back to you soon. Until then, keep building the future 🚀",
-  duration: 2000, // 5 seconds
-});
+        title: "📩 Message received!",
+        description:
+          "Thanks for reaching out — I’ll get back to you soon. Until then, keep building the future 🚀",
+        duration: 2000,
+      });
 
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
